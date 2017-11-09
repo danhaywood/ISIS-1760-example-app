@@ -27,6 +27,25 @@
         <welcome-file>about/index.html</welcome-file>
     </welcome-file-list>
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:example-ignite.xml
+            classpath:spring-bean.xml
+            classpath:propertyPlaceholderConfigurer-config.xml
+        </param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>spring.config.file</param-name>
+        <param-value>classpath:spring.properties</param-value>
+    </context-param>
+
+
     <!-- shiro security configuration -->
     <listener>
         <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>

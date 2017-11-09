@@ -91,12 +91,12 @@
 		<mavendeps-isisintellij.version>0.0.1</mavendeps-isisintellij.version>
 		<mavendeps-isiswebapp.version>0.0.1</mavendeps-isiswebapp.version>
 
-		<compiler-plugin.source>1.7</compiler-plugin.source>
-		<compiler-plugin.target>1.7</compiler-plugin.target>
+		<compiler-plugin.source>1.8</compiler-plugin.source>
+		<compiler-plugin.target>1.8</compiler-plugin.target>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<ignite.version>2.1.0</ignite.version>
+		<ignite.version>2.3.0</ignite.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<slf4j.log4j.version>1.7.21</slf4j.log4j.version>
 	</properties>

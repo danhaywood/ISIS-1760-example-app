@@ -170,10 +170,53 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<profiles>
 
+		<profile>
+			<id>ignite</id>
+			<activation>
+				<property>
+					<name>!skip.ignite</name>
+				</property>
+			</activation>
+			<properties>
+				<ignite.version>2.3.0</ignite.version>
+				<spring.version>4.3.7.RELEASE</spring.version>
+			</properties>
+			<dependencies>
+
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+					<version>${spring.version}</version>
+				</dependency>
+
+				<dependency>
+					<groupId>org.apache.ignite</groupId>
+					<artifactId>ignite-core</artifactId>
+					<version>${ignite.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.ignite</groupId>
+					<artifactId>ignite-core</artifactId>
+					<version>${ignite.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.ignite</groupId>
+					<artifactId>ignite-spring</artifactId>
+					<version>${ignite.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.ignite</groupId>
+					<artifactId>ignite-indexing</artifactId>
+					<version>${ignite.version}</version>
+				</dependency>
+
+			</dependencies>
+		</profile>
 		<profile>
 			<id>jdbc-hsqldb</id>
 			<activation>

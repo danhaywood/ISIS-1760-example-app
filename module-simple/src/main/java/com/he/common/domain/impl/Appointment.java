@@ -5,6 +5,8 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.NotPersistent;
 import javax.jdo.annotations.VersionStrategy;
 
+import org.joda.time.DateTime;
+
 import org.apache.isis.applib.annotation.Action;
 import org.apache.isis.applib.annotation.CollectionLayout;
 import org.apache.isis.applib.annotation.DomainObject;
@@ -19,7 +21,6 @@ import org.apache.isis.applib.services.message.MessageService;
 import org.apache.isis.applib.services.repository.RepositoryService;
 import org.apache.isis.applib.services.title.TitleService;
 import org.apache.isis.applib.util.ObjectContracts;
-import org.joda.time.DateTime;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -77,14 +78,14 @@ public void setPractice(final Practice practice)
 }
 
 
-@javax.jdo.annotations.Column(allowsNull = "false", length = 25,name= "appointmenttime")
+@javax.jdo.annotations.Column(allowsNull = "false", /*length = 25,*/name= "appointmenttime")
 @Property() // editing disabled by default, see isis.properties
 @Getter
 @Setter
 @Title(prepend = "APT : ")
 private DateTime appointmenttime;
 
-@javax.jdo.annotations.Column(allowsNull = "false", length = 25,name= "appointmenttimetz")
+@javax.jdo.annotations.Column(allowsNull = "false", /*length = 25,*/name= "appointmenttimetz")
 @Getter
 @Setter
 private DateTime appointmenttimetz;
